@@ -38,6 +38,11 @@ void Evaluation_Of_Infix_Main(std::string &input){
         } else if(input[i] == '('){
             ops.push(input[i]);
         } else if(input[i] == ')'){
+            // Check for mismatched ')'
+            if(ops.empty()){
+                std::cerr << "Error: Mismatched parentheses (extra ')" << std::endl;
+                return;
+            }
             while(!ops.empty() && ops.top() != '('){
                 int val2 = values.top(); 
                 values.pop();
@@ -46,6 +51,11 @@ void Evaluation_Of_Infix_Main(std::string &input){
                 char op = ops.top(); 
                 ops.pop();
                 values.push(applyOp(val1, val2, op));
+            }
+            // Check if matching '(' exists
+            if(ops.empty() || ops.top() != '('){
+                std::cerr << "Error: Mismatched parentheses (extra ')" << std::endl;
+                return;
             }
             ops.pop();
         } else {
@@ -61,7 +71,12 @@ void Evaluation_Of_Infix_Main(std::string &input){
             ops.push(input[i]);
         }
     }
+    // Check for remaining '(' after processing all characters
     while(!ops.empty()){
+        if(ops.top() == '('){
+            std::cerr << "Error: Mismatched parentheses (extra '(')" << std::endl;
+            return;
+        }
         int val2 = values.top(); 
         values.pop();
         int val1 = values.top(); 
