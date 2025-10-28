@@ -5,6 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-set(SOURCE_FILES src/Linked_List.cpp)
+set(SOURCE_FILES src/Tree.cpp)
 
-add_executable(linked_list ${SOURCE_FILES})
+add_executable(main ${SOURCE_FILES})

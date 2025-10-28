@@ -58,7 +58,7 @@ void Evaluation_Of_Postfix_Expressions_Main(std::string &input){
 };
 
 int main(){
-    std::string prefix_expression = "*+23-45"; // Example Prefix Expression
+    std::string prefix_expression = "*+23+-459"; // Example Prefix Expression
     Evaluation_Of_Prefix_Expressions_Main(prefix_expression);
     std::string postfix_expression = "23+45-*"; // Example Postfix Expression
     Evaluation_Of_Postfix_Expressions_Main(postfix_expression);
