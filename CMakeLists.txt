@@ -5,6 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-set(SOURCE_FILES src/Tree.cpp)
+set(SOURCE_FILES src/Special_functions_of_data_structures/Find_Height_Of_A_BT.cpp)
 
 add_executable(main ${SOURCE_FILES})
