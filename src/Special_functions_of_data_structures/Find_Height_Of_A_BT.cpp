@@ -46,7 +46,7 @@ private:
     // Function to find the height of the binary tree
     int FindHeight(Node* node){
         if(node == nullptr){
-            return -1; // Height of empty tree is -1
+            return -1; // Height of empty tree is -1 the height of tree with only root node is 0
         }
         int leftHeight = FindHeight(node -> left);
         int rightHeight = FindHeight(node -> right);
