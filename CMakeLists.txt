@@ -5,6 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-set(SOURCE_FILES src/Special_functions_of_data_structures/Check_If_A_Given_Binary_Tree_Is_BST.cpp)
+set(SOURCE_FILES src/Special_functions_of_data_structures/Delete_A_Node_From_BST.cpp)
 
 add_executable(main ${SOURCE_FILES})
